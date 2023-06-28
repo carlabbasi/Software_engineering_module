@@ -9,7 +9,7 @@ adam = int(6)
 # print variables on one line, separated by commas
 print(john, mary, adam, sep=", ")
 
-# new variable equal to addition of three former variables
+# new variable equal to addition of three previous variables
 total_apples = john + mary + adam
 
 # print new variable to console
