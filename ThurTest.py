@@ -4,7 +4,7 @@ print("2.4.1.7 LAB \n")
 # create variables with value == number of apples
 john = 3
 mary = 5
-adam = int(6)
+adam = 6
 
 # print variables on one line, separated by commas
 print(john, mary, adam, sep=", ")
