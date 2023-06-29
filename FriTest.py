@@ -14,12 +14,12 @@ while var == True:                                                  # enter whil
     except ValueError:
         print("None numerical input detected. Please try again...") # if TypeError detected, print and loop
 
-var = True                                                          # as above ^
-while var == True:
+var1 = True                                                          # as above ^
+while var1 == True:
     try:
         input2 = float(input("Enter the second number : "))
         lst.append(input2)
-        var = False
+        var1 = False
     except ValueError:
         print("None numerical input detected. Please try again...")
 
@@ -32,7 +32,7 @@ exponent = lst[0] ** lst[1]
 floordiv = lst[0] // lst[1]
 
 # print arithmatic results
-print(f'The result of {lst[0]} + {lst[1]} is equal to {addition}')
+print(f'\nThe result of {lst[0]} + {lst[1]} is equal to {addition}')
 print(f'The result of {lst[0]} - {lst[1]} is equal to {subtraction}')
 print(f'The result of {lst[0]} * {lst[1]} is equal to {multiplication}')
 print(f'The result of {lst[0]} / {lst[1]} is equal to {division}')
@@ -40,17 +40,17 @@ print(f'The result of {lst[0]} ** {lst[1]} is equal to {exponent}')
 print(f'The result of {lst[0]} // {lst[1]} is equal to {floordiv}')
 
 print("\nThat's all, folks!\n")
-print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n")
+print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
 # 2.6.1.10 LAB
 print("*** Operators and expressions LAB1 - Input a number to evaluate against a confusing expression ***")
 # user input assigned to x as a float
-var = True
-while var == True:
+var2 = True
+while var2 == True:
     try:
         x = float(input("Enter value for x: "))
-        var = False
+        var2 = False
     except ValueError:
         print("None numerical input detected. Please try again...")
 
@@ -58,43 +58,44 @@ while var == True:
 y = 1 / (x + 1 / (x + 1 / (x + 1 / x)))
 
 # print end value of y where x is equal to user input
-print(f"\n y = {y} where x is equal to {x}.")
-print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n")
+print(f"\ny = 1 / ({x} + 1 / ({x} + 1 / ({x} + 1 / x)))")
+print(f"\ny = {y} where x is equal to {x}.")
+print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
 # 2.6.1.11 LAB
 print("*** Operators and expressions LAB2 - Evaluate the end time of a period of time ***")
 # input variables for time calculation with exception handling
-var = True                                                              # variable to control the loop
-while var == True:                                                      # enter while loop
+var3 = True                                                              # variable to control the loop
+while var3 == True:                                                      # enter while loop
     try:                                                                # try condition
         hour = int(input("Starting time (hours): "))                    # user input to hour variable
         if hour > 23 or hour < 0:                                      # if statement to catch input over 23 hours
             print("Hour(s) to range between 0 - 23")                    # print instruction to user
-            var = True                                                  # set var to True staying in loop
+            var3 = True                                                  # set var to True staying in loop
         else:                                                           # else statement
-            var = False                                                 # set var to false to break loop
+            var3 = False                                                 # set var to false to break loop
     except ValueError:
         print("None numerical input detected. Please try again...")     # if TypeError detected, print and loop
-        var = True
+        var3 = True
 
-var = True
-while var == True:
+var4 = True
+while var4 == True:
     try:
         mins = int(input("Starting time (minutes): "))
         if mins > 59 or mins < 0:
             print("Minute(s) range between 0-59")
-            var = True
+            var4 = True
         else:
-            var = False
+            var4 = False
     except ValueError:
         print("None numerical input detected. Please try again...")
 
-var = True
-while var == True:
+var5 = True
+while var5 == True:
     try:
         dura = int(input("Event duration (minutes): "))
-        var = False
+        var5 = False
     except ValueError:
         print("None numerical input detected. Please try again...")
 
