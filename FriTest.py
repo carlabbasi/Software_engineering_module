@@ -105,6 +105,6 @@ while var5 == True:
 total_mins = mins + dura                # calculate total amount of minutes
 hour = hour + (total_mins // 60)        # add additional hours from minutes input larger than 60
 total_mins = total_mins % 60            # modulo minutes to return result between 0-60
-hour = int(hour % 24)                   # modulo hours to return result between 0-24
+hour = hour % 24                        # modulo hours to return result between 0-24
 
 print(f"\nThe total time duration is: {hour}:{total_mins}")          # int result
