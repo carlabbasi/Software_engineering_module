@@ -2,6 +2,7 @@
 
 # 2.6.1.9 LAB
 print("*** Simple input & output LAB - Input 2 numbers to perform some basic arithmatic ***")
+
 # user inputs two numerical values
 lst=[]                                                              # create empty list for user inputs
 
@@ -45,6 +46,7 @@ print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 # 2.6.1.10 LAB
 print("*** Operators and expressions LAB1 - Input a number to evaluate against a confusing expression ***")
+
 # user input assigned to x as a float
 var2 = True
 while var2 == True:
@@ -65,18 +67,19 @@ print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 # 2.6.1.11 LAB
 print("*** Operators and expressions LAB2 - Evaluate the end time of a period of time ***")
+
 # input variables for time calculation with exception handling
 var3 = True                                                              # variable to control the loop
 while var3 == True:                                                      # enter while loop
-    try:                                                                # try condition
-        hour = int(input("Starting time (hours): "))                    # user input to hour variable
-        if hour > 23 or hour < 0:                                      # if statement to catch input over 23 hours
-            print("Hour(s) to range between 0 - 23")                    # print instruction to user
+    try:                                                                 # try condition
+        hour = int(input("Starting time (hours): "))                     # user input to hour variable
+        if hour > 23 or hour < 0:                                        # if statement to catch input over 23 hours
+            print("Hour(s) to range between 0 - 23")                     # print instruction to user
             var3 = True                                                  # set var to True staying in loop
-        else:                                                           # else statement
+        else:                                                            # else statement
             var3 = False                                                 # set var to false to break loop
     except ValueError:
-        print("None numerical input detected. Please try again...")     # if TypeError detected, print and loop
+        print("None numerical input detected. Please try again...")      # if TypeError detected, print and loop
         var3 = True
 
 var4 = True
