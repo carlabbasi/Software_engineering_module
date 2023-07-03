@@ -1,4 +1,4 @@
-# Thur Test
+# Thur29Jun.py
 
 print("2.4.1.7 LAB \n")
 # create variables with value == number of apples
