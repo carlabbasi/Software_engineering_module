@@ -44,22 +44,18 @@ guess_lst = []                                                  # empty list to 
 guess = int(input("\nEnter your guess: "))                      # number guess prompt
 
 while guess != 777:                                             # while guess is not secret number enter loop
-    print("Hmmm, thinking......")                               # calculating guess
+    print("Hmmm, thinking......")                                # calculating guess
     snooze.sleep(0.5)
     print(f"\nNope! You're stuck in my loop! You incorrectly guessed {guess}.")
     guesses += 1                                                # increment guesses by 1 after each guess
     guess_lst.append(guess)                                     # append last guess to guess list
 
-    if guess == 7:                                              # if == 7 say that's the right first number
-        print("That's the correct first number! Keep guessing")
+    if "77" in str(guess):                                     # if "77" appears in guess at all, 2 numbers correct
+        print("At least two of those digits are correct, keep guessing!")
         guess = int(input("Enter your guess: "))
 
-    elif guess == 77:                                           # if == 77 say that's the right first two numbers
-        print("That's the correct first two numbers! Keep guessing")
-        guess = int(input("Enter your guess: "))
-
-    elif "7" in str(guess):                                      # if "7" appears in guess at all, a number is correct
-        print("At least one of those numbers is correct!")
+    elif "7" in str(guess):                                      # if "7" appears in guess at all, 1 number correct
+        print("At least one of those digits is correct, keep guessing!")
         guess = int(input("Enter your guess: "))
 
     else:
