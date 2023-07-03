@@ -40,22 +40,3 @@ print(f"The tax is: {tax} thalers")
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
-
-# 3.1.1.12 LAB - Leap year checker
-# input
-year = int(input("Enter a year: "))                                 # user inputs year
-
-# year calculation
-if year < 1582:                                                     # is year before 1582?
-	print(f"{year} is before the start of the Gregorian calendar")
-else:
-	if year % 4 != 0:                                               # is year dividable by 4?
-		print(f"{year} is a common year")
-	elif year % 100 != 0:                                           # is year dividable by 100?
-		print(f"{year} is a leap year")
-	elif year % 400 != 0:                                           # is year dividable by 400?
-		print(f"{year} is a common year")
-	else:                                                           # otherwise leap year.
-		print(f"{year} is a leap year")
-
-print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
