@@ -27,7 +27,7 @@ jury = input("Did you do jury duty this year? Enter y/n? ")     # user declares 
 if income < 85528:
 	tax = (income * 0.18) - 556.02                              # calculation for tax on lower income
 else:
-	tax = (income - 85528) * 0.32 + 14839.02                    # calculation for tax on higher income
+	tax = ((income - 85528) * 0.32) + 14839.02                    # calculation for tax on higher income
 
 # jury calculation
 if jury == "y": tax = tax / 2                                   # Divide tax by two if y inputted
