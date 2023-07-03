@@ -44,7 +44,7 @@ guess_lst = []                                                  # empty list to 
 guess = int(input("\nEnter your guess: "))                      # number guess prompt
 
 while guess != 777:                                             # while guess is not secret number enter loop
-    print("Hmmm,thinking......")                                # calculating guess
+    print("Hmmm, thinking......")                               # calculating guess
     snooze.sleep(0.5)
     print(f"\nNope! You're stuck in my loop! You incorrectly guessed {guess}.")
     guesses += 1                                                # increment guesses by 1 after each guess
