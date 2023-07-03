@@ -27,7 +27,7 @@ jury = input("Did you do jury duty this year? Enter y/n? ")     # user declares 
 if income < 85528:
 	tax = (income * 0.18) - 556.02                              # calculation for tax on lower income
 else:
-	tax = ((income - 85528) * 0.32) + 14839.02                    # calculation for tax on higher income
+	tax = ((income - 85528) * 0.32) + 14839.02                  # calculation for tax on higher income
 
 # jury calculation
 if jury == "y": tax = tax / 2                                   # Divide tax by two if y inputted
@@ -47,15 +47,15 @@ year = int(input("Enter a year: "))                                 # user input
 
 # year calculation
 if year < 1582:                                                     # is year before 1582?
-	print("Year is before the start of the Gregorian calendar")
+	print(f"{year} is before the start of the Gregorian calendar")
 else:
 	if year % 4 != 0:                                               # is year dividable by 4?
-		print("This is a common year")
+		print(f"{year} is a common year")
 	elif year % 100 != 0:                                           # is year dividable by 100?
-		print("This is a leap year")
+		print(f"{year} is a leap year")
 	elif year % 400 != 0:                                           # is year dividable by 400?
-		print("This is a common year")
+		print(f"{year} is a common year")
 	else:                                                           # otherwise leap year.
-		print("This is a leap year")
+		print(f"{year} is a leap year")
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
