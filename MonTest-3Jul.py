@@ -17,7 +17,7 @@ else: print(f"Spathiphyllum! Not {plant} !")                  				# if other pla
 # 3.1.1.11 LAB - Tax calculator
 # inputs
 income = float(input("Enter the annual income: "))              # user enters income
-jury = input("Did you do jury duty this year? Enter y/n? ")     # user declares jusy status
+jury = input("Did you do jury duty this year? Enter y/n? ")     # user declares jury status
 
 # tax calculation
 if income < 85528:
