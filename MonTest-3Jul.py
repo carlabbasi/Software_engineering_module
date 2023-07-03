@@ -9,12 +9,9 @@ print(n >= 100)
 # 3.1.1.10 LAB - plant checker
 plant = input("Enter a plant name: ")
 
-if plant == "Spathiphyllum":                                # if spelt upper case
-    print("Yes - Spathiphyllum is the best plant ever!")
-elif plant == "spathiphyllum":                              # if spelt lower case
-    print("No, I want a BIG Spathiphyllum!")
-else:
-    print(f"Spathiphyllum! Not {plant} !")                  # if other plant
+if plant == "Spathiphyllum": print("Yes - Spathiphyllum is the best plant ever!")	# if spelt upper case
+elif plant == "spathiphyllum": print("No, I want a BIG Spathiphyllum!")			# if spelt lower case
+else: print(f"Spathiphyllum! Not {plant} !")                  				# if other plant
 
 
 # 3.1.1.11 LAB - Tax calculator
