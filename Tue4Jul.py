@@ -1,5 +1,6 @@
 # Tue4Jul.py
-import time                                                         # import time for LABs 3.2.1.3 & 3.2.1.6 
+
+import time             # import time module for LABs 3.2.1.3 & 3.2.1.6 (modules should be imported at start of file)
 
 # 3.1.1.12 LAB - Leap year checker
 # input
@@ -21,51 +22,84 @@ else:
 print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
-# 3.2.1.3 LAB - garry trotter secret number guesser
-
-print("+================================+     ^")               # welcome message
-time.sleep(0.25)
-print("| Welcome to my game, muggle!    |    /_\\")
-time.sleep(0.25)
-print("| Enter an integer number        |     O  |")
-time.sleep(0.25)
-print("| and guess what number I've     |   --|--|")
-time.sleep(0.25)
-print("| picked for you.                |     |  |")
-time.sleep(0.25)
-print("| So, what is the secret number? |    / \\")
-time.sleep(0.25)
-print("+================================+   /   \\")
-time.sleep(0.25)
+# 3.2.1.3 LAB -  secret number guesser
+# print "animated" welcome message
+print("\n+================================+              ^       _________________")
+time.sleep(0.5)                                                                         # add delay for animate effect
+print("| Enter an integer number        |         o   /_\\     / Welcome muggle! \\")
+time.sleep(0.5)
+print("| to guess my secret number.     |         |    O    <%\\_________________/")
+time.sleep(0.5)
+print("| Guess correctly to win a       |         | ---|---")
+time.sleep(0.5)
+print("| PRIZE!!!!!                     |         |    |   ")
+time.sleep(0.5)
+print("| So, what is the secret number? |         |   / \\")
+time.sleep(0.5)
+print("+================================+            /   \\")
+time.sleep(0.5)
 
 secret_number = 777                                             # declare secret number
-guesses = 1                                                     # total guesses variable
-guess_lst = []                                                  # empty list to catch previous guesses
+guesses = 1                                                     # total guesses counter variable
+guess_lst = []                                                  # empty list to catch all previous guesses
 guess = int(input("\nEnter your guess: "))                      # number guess prompt
 
 while guess != 777:                                             # while guess is not secret number enter loop
     print("Hmmm, thinking......")                               # calculating guess
-    time.sleep(0.5)
-    print(f"\nNope! You're stuck in my loop! You incorrectly guessed {guess}.")
-    guesses += 1                                                # increment guesses by 1 after each guess
+    time.sleep(0.5)                                             # add delay
+    print(f"\nNot quite, you're stuck in my loop! You incorrectly guessed {guess}.")    # wrong guess
+    guesses += 1                                                # increment guesses count by 1 after each guess
     guess_lst.append(guess)                                     # append last guess to guess list
 
-    if "77" in str(guess):                                     # if "77" appears in guess at all, 2 numbers correct
-        print("At least two of those digits are correct, keep guessing!")
+    if "77" in str(guess):                                      # if "77" appears in guess at all, 2 numbers correct
+        print("At least two of those digits is in my number, keep guessing!")
         guess = int(input("Enter your guess: "))
 
     elif "7" in str(guess):                                      # if "7" appears in guess at all, 1 number correct
-        print("At least one of those digits is correct, keep guessing!")
+        print("At least one of those digits is in my number, keep guessing!")
         guess = int(input("Enter your guess: "))
 
     else:
         guess = int(input("Enter your guess: "))
 
-print(f"""
-Well done, muggle! You are free now.
-You guessed the secret number {guess} after {guesses} attempts.
-Your previous guesses were {guess_lst}
-""")
+print("\nWell done, muggle! You are free now.")                              # correct guess
+print(f"You guessed the secret number {guess} after {guesses} attempts.")  # fstring with correct guess & guess attempts
+print(f"Your previous guesses were {guess_lst}")                           # fstring with all previous guesses
+
+print("Here is your PRIZE!!!")                                              # reward correct guess with prize
+
+for number in range(5):                                                     # short loop to create suspense
+    dot = "."                                       # define dot as "."
+    dots = number * dot
+    print(dots)
+    time.sleep(1)
+
+print("             *")                                                     # print wizard ascii image
+time.sleep(0.25)
+print("            / \\")
+time.sleep(0.25)
+print("           /___\\")
+time.sleep(0.25)
+print("           (o o)            * *")
+time.sleep(0.25)
+print("           ) L (           /  * *")
+time.sleep(0.25)
+print("  ________()(-)()________ /   * * *")
+time.sleep(0.25)
+print("E\\| _____ )()()()______ |/B    * * * *")
+time.sleep(0.25)
+print("| /       ()()()(      \\|      * * * * * *")
+time.sleep(0.25)
+print("          | )() |")
+time.sleep(0.25)
+print("         /       \\")
+time.sleep(0.25)
+print("        /  *   *  \\   A slightly less crapper wizard!")
+time.sleep(0.25)
+print("       /   *   *   \\")
+time.sleep(0.25)
+print("Credit: ascii.co.uk/art/wizard")                                 # image credit
+
 print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
