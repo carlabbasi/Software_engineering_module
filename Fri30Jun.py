@@ -1,4 +1,4 @@
-# Fri Test
+# Fri30Jun.py
 
 # 2.6.1.9 LAB
 print("*** Simple input & output LAB - Input 2 numbers to perform some basic arithmatic ***")
