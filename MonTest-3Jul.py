@@ -5,13 +5,17 @@
 n = int(input("Enter number: "))
 print(n >= 100)
 
+print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
+
 
 # 3.1.1.10 LAB - plant checker
 plant = input("Enter a plant name: ")
 
-if plant == "Spathiphyllum": print("Yes - Spathiphyllum is the best plant ever!")	# if spelt upper case
-elif plant == "spathiphyllum": print("No, I want a BIG Spathiphyllum!")			# if spelt lower case
-else: print(f"Spathiphyllum! Not {plant} !")                  				# if other plant
+if plant == "Spathiphyllum": print("Yes - Spathiphyllum is the best plant ever!")	# if spelt upper case S
+elif plant == "spathiphyllum": print("No, I want a BIG Spathiphyllum!")				# and if spelt lower case s
+else: print(f"Spathiphyllum! Not {plant} !")										# if other plant
+
+print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
 # 3.1.1.11 LAB - Tax calculator
@@ -34,6 +38,8 @@ if tax < 0.0: tax = 0.0
 tax = round(tax, 0)
 print(f"The tax is: {tax} thalers")
 
+print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
+
 
 # 3.1.1.12 LAB - Leap year checker
 # input
@@ -51,3 +57,5 @@ else:
 		print("This is a common year")
 	else:                                                           # otherwise leap year.
 		print("This is a leap year")
+
+print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
