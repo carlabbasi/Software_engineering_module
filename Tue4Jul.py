@@ -22,7 +22,7 @@ else:
 print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
-# 3.2.1.3 LAB -  secret number guesser
+# 3.2.1.3 LAB -  secret number guessing game
 # print "animated" welcome message
 print("\n+================================+              ^       _________________")
 time.sleep(0.5)                                                                         # add delay for animate effect
