@@ -26,7 +26,7 @@ print("                   /  /")
 user = "Y"                          # set user to Y for application control
 
 while user == "Y":                  # user enters total amount of blocks
-    total_blocks = int(input("\nEnter the total amount of blocks to calculate the amount of layers of the pyramid: "))
+    total_blocks = int(input("\nEnter the total amount of blocks to calculate the amount of layers for a pyramid: "))
     blocks = total_blocks           # second variable created to preserve users input
     counter = 1                     # create a counter to increment blocks per layer, per loop
     height = 0                      # create a counter to increment height per loop
