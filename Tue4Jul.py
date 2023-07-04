@@ -5,7 +5,7 @@ import time             # import time module for LABs 3.2.1.3 & 3.2.1.6 (modules
 # 3.1.1.12 LAB - Leap year checker
 # input
 print("\nEnter a year to find out whether it is a common year or a leap year!")
-year = int(input("Select a year: "))                                 # user inputs year
+year = int(input("Select a year: "))                                # user inputs year
 
 # year calculation
 if year < 1582:                                                     # is year before 1582?
@@ -45,7 +45,7 @@ guess_lst = []                                                  # empty list to 
 guess = int(input("\nEnter your guess: "))                      # number guess prompt
 
 while guess != 777:                                             # while guess is not secret number enter loop
-    print("Hmmm, thinking......")                               # calculating guess
+    print("Thinking......")                                     # calculating guess
     time.sleep(0.5)                                             # add delay
     print(f"\nNot quite, you're stuck in my loop! You incorrectly guessed {guess}.")    # wrong guess
     guesses += 1                                                # increment guesses count by 1 after each guess
@@ -62,15 +62,15 @@ while guess != 777:                                             # while guess is
     else:
         guess = int(input("Enter your guess: "))
 
-print("\nWell done, muggle! You are free now.")                              # correct guess
-print(f"You guessed the secret number {guess} after {guesses} attempts.")  # fstring with correct guess & guess attempts
-print(f"Your previous guesses were {guess_lst}")                           # fstring with all previous guesses
+print("\nWell done, muggle! You are free now.")                             # correct guess
+print(f"You guessed the secret number {guess} after {guesses} attempts.")   # fstring with correct guess & guess attempts
+print(f"Your previous guesses were {guess_lst}")                            # fstring with all previous guesses
 
-print("Here is your PRIZE!!!")                                              # reward correct guess with prize
+print("\nHere is your PRIZE!!!")                                            # reward correct guess with prize
 
 for number in range(5):                                                     # short loop to create suspense
-    dot = "."                                       # define dot as "."
-    dots = number * dot
+    dot = "."                                                               # define dot as "."
+    dots = number * (dot *2)
     print(dots)
     time.sleep(1)
 
