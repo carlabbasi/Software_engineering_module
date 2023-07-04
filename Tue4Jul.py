@@ -45,7 +45,7 @@ guess_lst = []                                                  # empty list to 
 guess = int(input("\nEnter your guess: "))                      # number guess prompt
 
 while guess != 777:                                             # while guess is not secret number enter loop
-    print("Thinking......")                                     # calculating guess
+    print("Thinking......")                               # calculating guess
     time.sleep(0.5)                                             # add delay
     print(f"\nNot quite, you're stuck in my loop! You incorrectly guessed {guess}.")    # wrong guess
     guesses += 1                                                # increment guesses count by 1 after each guess
@@ -59,6 +59,14 @@ while guess != 777:                                             # while guess is
         print("At least one of those digits is in my number, keep guessing!")
         guess = int(input("Enter your guess: "))
 
+    elif guesses == 6:
+        print("Ill give you a clue, the first digit begins with S")
+        continue
+
+    elif guesses == 10:
+        print("I'll give you a second clue, the second digit begins with S!")
+        continue
+
     else:
         guess = int(input("Enter your guess: "))
 
@@ -66,7 +74,7 @@ print("\nWell done, muggle! You are free now.")                             # co
 print(f"You guessed the secret number {guess} after {guesses} attempts.")   # fstring with correct guess & guess attempts
 print(f"Your previous guesses were {guess_lst}")                            # fstring with all previous guesses
 
-print("\nHere is your PRIZE!!!")                                            # reward correct guess with prize
+print("\nHere is your PRIZE!!!")                                              # reward correct guess with prize
 
 for number in range(5):                                                     # short loop to create suspense
     dot = "."                                                               # define dot as "."
