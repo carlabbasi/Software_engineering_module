@@ -8,6 +8,6 @@ user = ""                                                      # set variable to
 while True:                                                    # enter while loop
   if user == "chupacabra":                                     # if / break clause
     break
-  user = input("Guess the secret word. What is your guess: "?  # user input
+  user = input("Guess the secret word. What is your guess?: ") # user input
 
 print("You've successfully left the loop")                     # loop exit statement
