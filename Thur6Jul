@@ -1,0 +1,48 @@
+# 3.2.1.14 - Essentials of the while loop
+
+# intro "animation"
+print("                      ^ ")
+time.sleep(0.25)
+print("                    /   \\")
+time.sleep(0.25)
+print("                  /       \\        \\---- The pyramid layer")
+time.sleep(0.25)
+print("                /           \\        \\ ---- calculator 3000 turbo")
+time.sleep(0.25)
+print("              /               \\")
+time.sleep(0.25)
+print("            /        __        \\")
+time.sleep(0.25)
+print("          /_________|  |_________\\")
+time.sleep(0.25)
+print("                    /  /")
+time.sleep(0.25)
+print("                   /  /")
+
+user = "Y"                                              # set user to Y for application control
+
+while user == "Y":                                      # user enters total amount of blocks
+    total_blocks = int(input("\nEnter the total amount of blocks to calculate the pyramid size: "))
+    blocks = total_blocks                               # second variable created to preserve users input
+    counter = 1                                         # create a counter to increment blocks per layer, per loop
+    height = 0                                          # create a counter to increment height per loop
+
+    while blocks < 0:               # while loop entered as long a blocks is larger than 0
+        blocks -= counter           # blocks - counter value
+        counter += 1                # counter incremented by 1 as each additional layer requires 1 additional block
+        height += 1                 # height incremented by 1 per loop to add a "layer"
+        if blocks < counter:        # counter will always count blocks required for the next full layer
+            break                   # if blocks is lower than counter, loop breaks
+
+    # when loop is broken, prints how many blocks was first entered from the 'total_blocks' variable, how many layers
+    # were achieved in the 'height' variable and how many blocks are remaining in the 'blocks' variable
+    print(f"""
+    With {total_blocks} blocks you can build a pyramid with {height} layer(s).
+    You will have {blocks} blocks left over.
+    """)
+
+    user = (input("Try another number? Y/N "))      # added additional while loop to run loop again for multiple
+    user = user.upper()                             # number entries for ease of testing.
+
+print("\n*** Application terminated ***")           # application terminates if user inputs anything other than 'Y'.
+
