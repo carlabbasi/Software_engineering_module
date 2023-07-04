@@ -1,6 +1,6 @@
 # Thur6Jul.py
 
-import time
+import time                      # import time for use of sleep function
 
 # 3.2.1.14 - Essentials of the while loop
 
@@ -23,15 +23,15 @@ print("                    /  /")
 time.sleep(0.25)
 print("                   /  /")
 
-user = "Y"                                              # set user to Y for application control
+user = "Y"                          # set user to Y for application control
 
-while user == "Y":                                      # user enters total amount of blocks
-    total_blocks = int(input("\nEnter the total amount of blocks to calculate the pyramid size: "))
-    blocks = total_blocks                               # second variable created to preserve users input
-    counter = 1                                         # create a counter to increment blocks per layer, per loop
-    height = 0                                          # create a counter to increment height per loop
+while user == "Y":                  # user enters total amount of blocks
+    total_blocks = int(input("\nEnter the total amount of blocks to calculate the amount of layers of the pyramid: "))
+    blocks = total_blocks           # second variable created to preserve users input
+    counter = 1                     # create a counter to increment blocks per layer, per loop
+    height = 0                      # create a counter to increment height per loop
 
-    while blocks < 0:               # while loop entered as long a blocks is larger than 0
+    while blocks != 0:              # while loop entered as long a blocks is larger than 0
         blocks -= counter           # blocks - counter value
         counter += 1                # counter incremented by 1 as each additional layer requires 1 additional block
         height += 1                 # height incremented by 1 per loop to add a "layer"
@@ -49,4 +49,9 @@ while user == "Y":                                      # user enters total amou
     user = user.upper()                             # number entries for ease of testing.
 
 print("\n*** Application terminated ***")           # application terminates if user inputs anything other than 'Y'.
+print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
+
+# 3.2.1.15
+
+
 
