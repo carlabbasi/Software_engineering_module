@@ -94,7 +94,7 @@ while user == "Y":
         print("\nCalculator only works with positive integer numbers (no strings)")
         continue                    # continue loop if error detected
 
-    except KeyboardInterrupt:                           # error handling for keyboard interrupt
+    except KeyboardInterrupt:       # error handling for keyboard interrupt
         user = "N"
         continue
 
@@ -130,7 +130,7 @@ while user == "Y":
         user = "N"
         continue
 
-print("\n*** Application terminated ***")           # application terminates if user inputs anything other than 'Y'.
+print("\n*** Application terminated ***")   # application terminates if user inputs anything other than 'Y'.
 print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
