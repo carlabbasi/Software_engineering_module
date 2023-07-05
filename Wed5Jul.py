@@ -1,5 +1,7 @@
 # Wed5July.py
 
+import time
+
 # 3.2.1.9 LAB - Random word guesser
 print("*** While loop secret word guesser ***")
 
@@ -18,23 +20,16 @@ print("You've successfully left the loop")                   # loop exit stateme
 print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
-# 3.2.1.10 LAB - The ugly vowel eater
+# # 3.2.1.10 LAB - The ugly vowel eater
 print("\n*** The ugly vowel eater! ***")
 
 word = input("Enter a word to put in the vowel eater: ")    # user prompt
 word = word.upper()                                         # convert string to upper case
 
 for letter in word:                                         # enter for loop
-    if letter == "A":                                       # check if letter is = A
+    if letter == "A" or letter == "E" or letter == "I" or letter == "O" or letter == "U":  # check if letter is vowel
         continue
-    elif letter == "E":                                     # check if letter is = E
-        continue
-    elif letter == "I":                                     # check if letter is = I
-        continue
-    elif letter == "O":                                     # check if letter is = O
-        continue
-    elif letter == "U":                                     # check if letter is = U
-        continue
+
     else:
         print(letter)                                       # if letter != vowel, print letter to console
 print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
@@ -48,15 +43,7 @@ word = word.upper()                                         # convert string to 
 new_word = ""                                               # empty variable for non vowel letter
 
 for letter in word:                                         # enter for loop
-    if letter == "A":                                       # check if letter is = A
-        continue
-    elif letter == "E":                                     # check if letter is = E
-        continue
-    elif letter == "I":                                     # check if letter is = I
-        continue
-    elif letter == "O":                                     # check if letter is = O
-        continue
-    elif letter == "U":                                     # check if letter is = U
+    if letter == "A" or letter == "E" or letter == "I" or letter == "O" or letter == "U":  # check if letter is vowel
         continue
     else:
         new_word += letter                                  # if letter != vowel add to new_word variable
