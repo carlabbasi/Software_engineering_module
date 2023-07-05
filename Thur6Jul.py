@@ -1,68 +1,68 @@
 # Thur6Jul.py
 
-import time                                    # import time for use of sleep function
+import time                      # import time for use of sleep function
 
 # 3.3.1.4 - Bitwise operations
-#create a flag with a set flag
-                                               #0000 0000 0000 x000
-flag_register = 0x1234 #flag reset/cleared      0001 0010 0011 0100
-flag_register = 0x1248 #flag set                0001 0010 0100 1000
 
-#create an appropriate mask
+# create a flag with a set flag                   # 0000 0000 0000 x000
+# flag_register = 0x1234  # flag reset/cleared      0001 0010 0011 0100
+flag_register = 0x1248  # flag set                 0001 0010 0100 1000
+
+# create an appropriate mask
 mask = 8                                       # 0000 0000 0000 1000
 
-#1 use & to check if flag set/reset
+# 1 use & to check if flag set/reset
 if flag_register & mask:
     print("Windmill is on")
 else:
     print("Windmill is off")
 
-#2 reset(assign zero) to bit
+# 2 reset(assign zero) to bit
 flag_register = flag_register & ~mask
 
-#check 2
+# check 2
 if flag_register & mask:
     print("Windmill is on")
 else:
     print("Windmill is off")
 
-#3 use | to assign bit to 1 
+# 3 use | to assign bit to 1
 flag_register = flag_register | mask
 
-#check 3
+# check 3
 if flag_register & mask:
     print("Windmill is on")
 else:
     print("Windmill is off")
 
-#4 use ^ to make it the opposite/negate your bit
+# 4 use ^ to make it the opposite/negate your bit
 flag_register = flag_register ^ mask
 
-#check 4
+# check 4
 if flag_register & mask:
     print("Windmill is on")
 else:
     print("Windmill is off")
 
-#5 use ^ to make it the opposite/negate your bit
+# 5 use ^ to make it the opposite/negate your bit
 flag_register = flag_register ^ mask
 
-#check 5
+# heck 5
 if flag_register & mask:
     print("Windmill is on")
 else:
     print("Windmill is off")
 
-#The above should output (ingoring the # of course)
-#bit is set
-#bit is reset
-#bit is set
-#bit is reset
-#bit is set
+# The above should output (ingoring the # of course)
+# bit is set
+# bit is reset
+# bit is set
+# bit is reset
+# bit is set
 print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
-# 3.2.1.14 - Essentials of the while loop
+# 3.2.1.14 - Essentials of the while loop - Full version
 
 # intro "animation"
 print("                      ^ ")
@@ -79,21 +79,21 @@ print("            /        __        \\")
 time.sleep(0.2)
 print("          /_________|  |_________\\")
 time.sleep(0.25)
-print("                    /  /")
-time.sleep(0.25)
 print("                   /  /")
+time.sleep(0.25)
+print("                  /  /")
 
 user = "Y"                          # set user variable to Y for application control
 while user == "Y":
-
     total_blocks = 0                # variable initially defined in case try statement fails
 
     try:                            # create exception to avoid value error if a string is input
-        total_blocks = int(input("\nEnter the total amount of blocks to calculate the amount of layers for a pyramid: "))
-                                    # user enters total amount of blocks
+        total_blocks = int(input("\nEnter total amount of blocks to calculate the amount of layers for a pyramid: "))
+        # user enters total amount of blocks
     except ValueError:
         print("\nCalculator only works with positive integer numbers (no strings)")
         continue                    # continue loop if error detected
+
     except KeyboardInterrupt:                           # error handling for keyboard interrupt
         user = "N"
         continue
@@ -102,8 +102,8 @@ while user == "Y":
     counter = 1                     # create a counter to increment blocks per layer by 1 per loop
     height = 0                      # create a counter to increment height by 1 layer per loop
 
-    if total_blocks == 0:
-        print("\nCalculator does not work with 0 value")
+    if total_blocks == 0 or total_blocks == 1 or total_blocks == 2:
+        print("\nCalculator does not work with 0 - 2 block value")
         continue
 
     if "-" in str(blocks):          # check input to avoid any negative numbers
@@ -147,6 +147,7 @@ while user == "Y":                          # while loop for application control
     except ValueError:
         print("\nValue must be non-negative non-zero integer number!")  # message if Value Error detected
         continue
+
     except KeyboardInterrupt:               # error handling for keyboard interrupt
         user = "N"
         continue
@@ -176,11 +177,10 @@ while user == "Y":                          # while loop for application control
     print(f"Total steps taken = {steps}")   # print steps variable containing count of steps taken to get to 1
 
     try:                                    # ask if the user wnats to try another number
-        user = input("\nPress Y to try another number, anything else to quit: ") # if Y inputted, application control-
-        user = user.upper()                                                     # while loop restarts
+        user = input("\nPress Y to try another number, anything else to quit: ")  # if Y inputted, application control-
+        user = user.upper()                                                       # while loop restarts
     except KeyboardInterrupt:               # error handling for keyboard interrupt
         user = "N"
         continue
 
 print("\nApplication terminated")           # application termination message
-
