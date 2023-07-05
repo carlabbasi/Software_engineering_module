@@ -1,6 +1,66 @@
 # Thur6Jul.py
 
-import time                      # import time for use of sleep function
+import time                                    # import time for use of sleep function
+
+# 3.3.1.4 - Bitwise operations
+#create a flag with a set flag
+                                               # 0000 0000 0000 x000
+#flag_register = 0x1234 #flag reset/cleared      0001 0010 0011 0100
+flag_register = 0x1248 #flag set                 0001 0010 0100 1000
+
+#create an appropriate mask
+mask = 8                                       # 0000 0000 0000 1000
+
+#1 use & to check if flag set/reset
+if flag_register & mask:
+    print("Windmill is on")
+else:
+    print("Windmill is off")
+
+#2 reset(assign zero) to bit
+flag_register = flag_register & ~mask
+
+#check 2
+if flag_register & mask:
+    print("Windmill is on")
+else:
+    print("Windmill is off")
+
+#3 use | to assign bit to 1 
+flag_register = flag_register | mask
+
+#check 3
+if flag_register & mask:
+    print("Windmill is on")
+else:
+    print("Windmill is off")
+
+#4 use ^ to make it the opposite/negate your bit
+flag_register = flag_register ^ mask
+
+#check 4
+if flag_register & mask:
+    print("Windmill is on")
+else:
+    print("Windmill is off")
+
+#5 use ^ to make it the opposite/negate your bit
+flag_register = flag_register ^ mask
+
+#check 5
+if flag_register & mask:
+    print("Windmill is on")
+else:
+    print("Windmill is off")
+
+#The above should output (ingoring the # of course)
+#bit is set
+#bit is reset
+#bit is set
+#bit is reset
+#bit is set
+print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
+
 
 # 3.2.1.14 - Essentials of the while loop
 
