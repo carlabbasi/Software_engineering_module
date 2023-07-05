@@ -176,7 +176,7 @@ while user == "Y":                          # while loop for application control
     print(f"\n{c0_numbers}")                # once c0 == 1, print c0_numbers list containing all previous c0 values
     print(f"Total steps taken = {steps}")   # print steps variable containing count of steps taken to get to 1
 
-    try:                                    # ask if the user wnats to try another number
+    try:                                    # ask if the user wants to try another number
         user = input("\nPress Y to try another number, anything else to quit: ")  # if Y inputted, application control-
         user = user.upper()                                                       # while loop restarts
     except KeyboardInterrupt:               # error handling for keyboard interrupt
