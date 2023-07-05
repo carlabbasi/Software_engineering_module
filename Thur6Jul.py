@@ -5,7 +5,7 @@ import time                                    # import time for use of sleep fu
 # 3.3.1.4 - Bitwise operations
 #create a flag with a set flag
                                                # 0000 0000 0000 x000
-#flag_register = 0x1234 #flag reset/cleared      0001 0010 0011 0100
+flag_register = 0x1234 #flag reset/cleared      0001 0010 0011 0100
 flag_register = 0x1248 #flag set                 0001 0010 0100 1000
 
 #create an appropriate mask
