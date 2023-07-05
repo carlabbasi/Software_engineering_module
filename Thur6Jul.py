@@ -1,6 +1,6 @@
 # Thur6Jul.py
 
-import time                      # import time for use of sleep function
+import time                                    # import time for use of sleep function
 
 # 3.3.1.4 - Bitwise operations
 
