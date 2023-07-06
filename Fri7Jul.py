@@ -49,7 +49,7 @@ for names in range(1):                          # for loop to add 2 names to lis
                 beatles.append(input1)          # if input correct append to list
                 break
     break                                       # break for loop
-                                    # break for loop
+
 print("Step 3:", beatles)
 time.sleep(0.5)
 
