@@ -1,3 +1,4 @@
+# Tue11Jul.py
 
 # 4.3.1.6 LAB - Leap year function
 def is_year_leap(year):
@@ -94,30 +95,32 @@ def is_year_leap(year):
 
 
 def day_of_year(year, month, day):
-    month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    days = 0
+    month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]   # number of days for each month of year
+    days = 0                                # empty days variable
 
-    if is_year_leap(year):
+    if is_year_leap(year):                  # if is leap year, adjust month_day index 1 to 29
         month_days[1] = 29
 
-    for i in range(month - 1):
-        days += month_days[i]
+    for i in range(month - 1):              # for loop to iterate same number of months input -1
+        days += month_days[i]               # add days of each month iterated through to variable
 
-    total_days = days + day
-    return total_days
+    total_days = days + day                 # total days == days of all months + day entered
+    return total_days                       # return total number of days
+
 
 def test3():                                    # test loop
     test_years = [1900, 2000, 2016, 1987]       # test data years
     test_months = [2, 2, 1, 11]                 # test data months
-    test_days = [28, 29, 23, 15]
-    test_results = [59, 60, 23, 319]             # correct test results to check against
-    print(f"Testing function days_of_year with input data:\n Years: {test_years}, Months: {test_months}, Days: {test_days}\n")
+    test_days = [28, 29, 23, 15]                # test data days
+    test_results = [59, 60, 23, 319]            # correct test results to check against
+    print(f"Testing function days_of_year with input data:\n Years: {test_years}, Months: {test_months}, Days: \
+{test_days}\n")
     for i in range(len(test_years)):            # for loop range, length == test_years
         yr = test_years[i]                      # i iterates through test_years to become yr variable
         mo = test_months[i]                     # i iterates through test_months to become mo variable
-        day = test_days[i]
-        print(yr, mo, day, "->", end="")             # test data printed with arrow
-        result = day_of_year(yr, mo, day)          # result checks against what is returned from days_in_month func
+        day = test_days[i]                      # i iterates through test_days to become day variable
+        print(yr, mo, day, "->", end="")        # test data printed with arrow
+        result = day_of_year(yr, mo, day)       # result checks against what is returned from days_in_month func
         if result == test_results[i]:           # if result is same as test_results, print OK, else print failed
             print("OK")
         else:
