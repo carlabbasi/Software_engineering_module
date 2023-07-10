@@ -15,10 +15,11 @@ def is_year_leap(year):
             return True
 
 
-def test1():                                    # test loop
+def test1():          # test loop
     test_data = [1900, 2000, 2016, 1987]        # test data
     test_results = [False, True, True, False]   # correct test result to check against
-    print(f"Testing function is_leap_year with input data:\n {test_data}\n")
+    print(f"Testing function is_leap_year with input data: \n{test_data}\n")
+
     for i in range(len(test_data)):             # for loop range, length == test data list
         yr = test_data[i]                       # i iterates through test data list to become yr vraiable
         print(yr, "->", end="")                 # yr printed with arrow
@@ -63,7 +64,7 @@ def test2():                                    # test loop
     test_years = [1900, 2000, 2016, 1987]       # test data years
     test_months = [2, 2, 1, 11]                 # test data months
     test_results = [28, 29, 31, 30]             # correct test results to check against
-    print(f"Testing function days_in_month with input data:\n Years: {test_years}, Months: {test_months}\n")
+    print(f"Testing function days_in_month with input data: \nYears: {test_years}, Months: {test_months}\n")
     for i in range(len(test_years)):            # for loop range, length == test_years
         yr = test_years[i]                      # i iterates through test_years to become yr variable
         mo = test_months[i]                     # i iterates through test_months to become mo variable
@@ -80,7 +81,7 @@ print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
 # 4.3.1.8 LAB - Day of the year function
-def is_year_leap(year):
+def is_year_leap2(year):
     if year < 1582:                     # is year before 1582?
         return False
     else:
@@ -98,7 +99,7 @@ def day_of_year(year, month, day):
     month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]   # number of days for each month of year
     days = 0                                # empty days variable
 
-    if is_year_leap(year):                  # if is leap year, adjust month_day index 1 to 29
+    if is_year_leap2(year):                  # if is leap year, adjust month_day index 1 to 29
         month_days[1] = 29
 
     for i in range(month - 1):              # for loop to iterate same number of months input -1
@@ -113,7 +114,7 @@ def test3():                                    # test loop
     test_months = [2, 2, 1, 11]                 # test data months
     test_days = [28, 29, 23, 15]                # test data days
     test_results = [59, 60, 23, 319]            # correct test results to check against
-    print(f"Testing function days_of_year with input data:\n Years: {test_years}, Months: {test_months}, Days: \
+    print(f"Testing function days_of_year with input data: \nYears: {test_years}, Months: {test_months}, Days: \
 {test_days}\n")
     for i in range(len(test_years)):            # for loop range, length == test_years
         yr = test_years[i]                      # i iterates through test_years to become yr variable
@@ -125,6 +126,7 @@ def test3():                                    # test loop
             print("OK")
         else:
             print("Failed")
+
 
 test3()
 print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
