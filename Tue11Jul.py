@@ -37,22 +37,8 @@ print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
 # 4.3.1.7 LAB - Leap year days function
-def is_year_leap1(year):
-    if year < 1582:                     # is year before 1582?
-        return None
-    else:
-        if year % 4 != 0:               # is year dividable by 4 = common
-            return False
-        elif year % 100 != 0:           # is year dividable by 100 = leap
-            return True
-        elif year % 400 != 0:           # is year dividable by 400 = common
-            return False
-        else:                           # otherwise leap year = leap
-            return True
-
-
 def days_in_month(year, month):
-    if is_year_leap1(year) and month == 2:      # if year returns True from is_year_leap1 function and month is 2
+    if is_year_leap(year) and month == 2:      # if year returns True from is_year_leap1 function and month is 2
         return 29                               # return 29 days for a leap year February
     elif month in [1, 3, 5, 7, 8, 10, 12]:      # else if month has 31 days, return 31
         return 31
@@ -83,25 +69,11 @@ print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
 # 4.3.1.8 LAB - Day of the year function
-def is_year_leap2(year):
-    if year < 1582:                     # is year before 1582?
-        return False
-    else:
-        if year % 4 != 0:               # is year dividable by 4 = common
-            return False
-        elif year % 100 != 0:           # is year dividable by 100 = leap
-            return True
-        elif year % 400 != 0:           # is year dividable by 400 = common
-            return False
-        else:                           # otherwise leap year = leap
-            return True
-
-
 def day_of_year(year, month, day):
     month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]   # number of days for each month of year
     days = 0                                # empty days variable
 
-    if is_year_leap2(year):                  # if is leap year, adjust month_day index 1 to 29
+    if is_year_leap(year):                  # if is leap year, adjust month_day index 1 to 29
         month_days[1] = 29
 
     for i in range(month - 1):              # for loop to iterate same number of months input -1
