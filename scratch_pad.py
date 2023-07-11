@@ -1,4 +1,5 @@
-#
+# scracth_pad.py
+
 # 4.3.1.9 LAB - Prime number finder
 
 def is_prime(num):
