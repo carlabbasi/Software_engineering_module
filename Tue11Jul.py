@@ -2,17 +2,19 @@
 
 # 4.3.1.6 LAB - Leap year function
 def is_year_leap(year):
+    is_leap = False
     if year < 1582:                     # is year before 1582?
         return None
     else:
         if year % 4 != 0:               # is year dividable by 4?
-            return False
+            is_leap = False
         elif year % 100 != 0:           # is year dividable by 100?
-            return True
+            is_leap = True
         elif year % 400 != 0:           # is year dividable by 400?
-            return False
+            is_leap = False
         else:                           # otherwise leap year.
-            return True
+            is_leap = True
+        return is_leap
 
 
 def test1():          # test loop
