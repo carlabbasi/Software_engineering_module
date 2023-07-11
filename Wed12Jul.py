@@ -124,7 +124,7 @@ while True:
     else:
         school_class[name] = (score,)
 
-for name in sorted(school_class.keys()):
+for name in (school_class.keys()):
     adding = 0
     counter = 0
     for score in school_class[name]:
