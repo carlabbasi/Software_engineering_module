@@ -4,19 +4,20 @@
 
 def is_prime(num):
 
-    for a in range(2, int(1 + num **0.5)):
+    for a in range(2, int(1 + num ** 0.5)):
         if num % a == 0:
             return False
     return True
+
 
 for i in range(1, 20):
     if is_prime(i + 1):
         print(i + 1, end=" ")
 print()
+print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
 # 4.3.1.10 LAB: Fuel consumption converter
-
 def liters_100km_to_miles_gallon(liters):
     gallons = liters / 3.785411784
     miles = 100 * 1000 / 1609.344
@@ -36,11 +37,12 @@ print(liters_100km_to_miles_gallon(10.))
 print(miles_gallon_to_liters_100km(60.3))
 print(miles_gallon_to_liters_100km(31.4))
 print(miles_gallon_to_liters_100km(23.5))
+print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 def my_function(my_list_1):
     print("Print #1:", my_list_1)
     print("Print #2:", my_list_2)
-    del my_list_1[0]  # Pay attention to this line.
+    my_list_1 = [0, 1]     # creates a new list called my_list_1 that no longer links to my_list_2
     print("Print #3:", my_list_1)
     print("Print #4:", my_list_2)
 
@@ -48,6 +50,20 @@ def my_function(my_list_1):
 my_list_2 = [2, 3]
 my_function(my_list_2)
 print("Print #5:", my_list_2)
+print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
+
+def my_function(my_list_1):
+    print("Print #1:", my_list_1)
+    print("Print #2:", my_list_2)
+    del my_list_1[0]  # Pay attention to this line. Deletes index 0 in all lists that reference the same area
+    print("Print #3:", my_list_1)
+    print("Print #4:", my_list_2)
+
+
+my_list_2 = [2, 3]
+my_function(my_list_2)
+print("Print #5:", my_list_2)
+print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
 dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval", "fish": "poison"}
@@ -85,9 +101,10 @@ print(dictionary)
 my_tuple = tuple(new_dict)          # convert dictionary to tuple
 print(my_tuple)
 
-colours_tuple = (("red", "rouge"),("green", "verdi"),("black", "noir"))
+colours_tuple = (("red", "rouge"), ("green", "verdi"), ("black", "noir"))
 colours_tuple = dict(colours_tuple)         # convert tuple to dict
 print(colours_tuple)
+print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 
 # Class score average calculator
