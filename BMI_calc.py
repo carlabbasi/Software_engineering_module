@@ -1,4 +1,4 @@
-# scracth_pad.py
+# BMI_calc.py
 
 # BMI Calculator for weight in KG or LBs and height in meters or feet & inches
 def lbs_to_kgs(kgs):
