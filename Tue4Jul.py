@@ -19,6 +19,7 @@ else:
         print("This is a common year")
     else:                                                           # otherwise leap year.
         print("This is a leap year")
+
 print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 

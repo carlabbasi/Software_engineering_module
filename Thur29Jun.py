@@ -17,9 +17,9 @@ print("Total apples =", total_apples)
 
 # new variable to average the amount of apples
 names = john + mary + adam
-vars = 3
-average_apples = names / vars
-average_apples_floor = names // vars
+number_names = 3
+average_apples = names / number_names
+average_apples_floor = names // number_names
 
 # print average variables to console
 print("Average apples =", average_apples)
@@ -51,8 +51,7 @@ print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n")
 
 print("2.4.1.10 LAB \n")
 # Declare variable and convert to float
-x = 1
-x = float(x)
+x = float(1)
 
 # Evaluate expression 3x**3 - 2x**2 + 3x - 1 and assign to y variable
 print("Evaluate 3x**3 - 2x**2 + 3x - 1 \n")
@@ -63,17 +62,10 @@ print("y =", y, "where x =", x)
 print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n")
 
 
-print("2.4.1.11 SUMMARY \n")
-print("Ex1 = 3")
-print("Ex2 = 101, m 101, del")
-print("Ex3 = 11")
-print("Ex4 = Shortcuts (!) \n")
-
-
 a = 6
 b = 3
 a /= 2 * b
-print( "a /= 2 *b =", a)
+print( "a /= 2 * b =", a)
 
 a = 6
 b = 3
@@ -83,16 +75,13 @@ print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n")
 
 
 print("2.5.1.2 LAB \n")
-#this program computes the number of seconds in a given number of hours
-#this program has been written two days ago <-- Remove!
+# this program computes the number of seconds in a given number of hours
 
-a = 2 # number of hours
-seconds = 3600 # number of seconds in 1 hour
+a = 2                                       # number of hours
+seconds = 3600                              # number of seconds in 1 hour
 
-print("Hours: ", a) # printing the number of hours
-print("Seconds in Hours: ", a * seconds) # printing the number of seconds in a given number of hours <--Removed # from beginning
+print("Hours: ", a)                         # printing the number of hours
+print("Seconds in Hours: ", a * seconds)    # printing the number of seconds in a given number of hours
 
+print("Goodbye!")  # Added goodbye
 
-#here we should also print "Goodbye", but a programmer didn't have time to write any code <-- Remove!
-print("Goodbye!") # Added goodbye
-#this is the end of the program that computes the number of seconds in 3 hour <-- Remove!

@@ -27,7 +27,7 @@ word = input("Enter a word to put in the vowel eater: ")    # user prompt
 word = word.upper()                                         # convert string to upper case
 
 for letter in word:                                         # enter for loop
-    if letter == "A" or letter == "E" or letter == "I" or letter == "O" or letter == "U":  # check if letter is vowel
+    if letter in "AEIOU":  # check if letter is vowel
         continue
 
     else:
@@ -43,7 +43,7 @@ word = word.upper()                                         # convert string to 
 new_word = ""                                               # empty variable for non vowel letter
 
 for letter in word:                                         # enter for loop
-    if letter == "A" or letter == "E" or letter == "I" or letter == "O" or letter == "U":  # check if letter is vowel
+    if letter in "AEIOU":  # check if letter is vowel
         continue
     else:
         new_word += letter                                  # if letter != vowel add to new_word variable

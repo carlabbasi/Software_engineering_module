@@ -14,3 +14,9 @@ for number in my_list:                       # for loop to iterate through numbe
 my_list = temp_list                             # rename to original list
 
 print(my_list)                                  # print list
+
+
+# new version of Operating with basic lists
+my_list = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9]
+my_list = list(set(my_list))  # set creates a mutable unordered collection that cannot contain duplicates
+print(my_list)

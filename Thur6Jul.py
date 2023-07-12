@@ -103,7 +103,7 @@ while user == "Y":
     height = 0                      # create a counter to increment height by 1 layer per loop
 
     if total_blocks == 0 or total_blocks == 1 or total_blocks == 2:
-        print("\nCalculator does not work with 0 - 2 block value")
+        print("\nCalculator does not work with 0 - 2 block initial value")
         continue
 
     if "-" in str(blocks):          # check input to avoid any negative numbers
