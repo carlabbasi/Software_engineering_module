@@ -38,7 +38,7 @@ print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
 # 4.3.1.7 LAB - Leap year days function
 def days_in_month(year, month):
-    if is_year_leap(year) and month == 2:      # if year returns True from is_year_leap1 function and month is 2
+    if is_year_leap(year) and month == 2:       # if year returns True from is_year_leap1 function and month is 2
         return 29                               # return 29 days for a leap year February
     elif month in [1, 3, 5, 7, 8, 10, 12]:      # else if month has 31 days, return 31
         return 31
