@@ -62,13 +62,18 @@ else:
 print(product)
 
 # 10) create a list called listOfInts (4)
-ListOfInts = []
+ListOfInts1 = []
 
 # 11 part a) create a for loop to iterate through the above list and populate the list with
 # {4,6,8,10,12,14,16,18,20,22}. Output the list to the console with a suitable message(7)
-for num in range(4, 23, 2):
-    ListOfInts.append(num)
 
+# list comprehension
+ListOfInts = [num for num in range(4,23,2)]
+print(f"The contents of ListOfInts: \n{ListOfInts}")
+
+# list append for loop
+for num in range(4, 23, 2):
+    ListOfInts1.append(num)
 print(f"The contents of ListOfInts: \n{ListOfInts}")
 
 # 11 part b) create a for loop to iterate through the above list and
